@@ -8,11 +8,57 @@
     tools:context=".MainActivity">
 
     <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="110dp"
+        android:id="@+id/bannerBackground"
+        android:layout_width="410dp"
+        android:layout_height="125dp"
         android:background="#FF5858"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iconImage"
+        android:layout_width="84dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="13dp"
+        android:contentDescription="icon"
+        app:layout_constraintBottom_toBottomOf="@+id/bannerBackground"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/icon" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="269dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="11dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="My Rol Library"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:typeface="sans"
+        app:layout_constraintBottom_toBottomOf="@+id/iconImage"
+        app:layout_constraintEnd_toStartOf="@+id/iconImage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/iconImage"
+        app:layout_constraintVertical_bias="0.529" />
+
+    <GridView
+        android:id="@+id/charGrid"
+        android:layout_width="0dp"
+        android:layout_height="604dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        android:numColumns="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bannerBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
